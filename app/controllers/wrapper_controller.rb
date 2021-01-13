@@ -7,7 +7,7 @@ class WrapperController < ApplicationController
 
     def wrap(input_string, column_number)
         trim_input = input_string.strip
-        column_number_int = column_number
+        column_number_int = column_number.to_i
         if trim_input.length <= column_number_int
             return trim_input
         else 
